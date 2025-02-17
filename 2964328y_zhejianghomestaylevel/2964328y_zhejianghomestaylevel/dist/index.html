@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>2964328y_Zhejianghomestaylevel</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zhejiang_homestaylevel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+   <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  
+  
+
+</head>
+<body>
+
+    <div id="map"></div>
+ 
+    <div style="background: white; padding: 10px; border-radius: 5px; position: absolute; bottom: 20px; left: 20px; z-index: 1000;">
+        <strong>Zhejiang Homestay Level</strong>
+        <hr style="margin: 5px 0;">
+        <div style="display: flex; align-items: center;">
+            <span style="width: 12px; height: 12px; background: hsl(244, 94%, 72%); display: inline-block; margin-right: 5px;"></span> Jinsu
+        </div>
+        <div style="display: flex; align-items: center;">
+            <span style="width: 12px; height: 12px; background: hsl(0, 91%, 71%); display: inline-block; margin-right: 5px;"></span> Platinum Lodge
+        </div>
+    </div>
+ <div id='console'>
+  <h1>Zhejiang Homestay Level</h1>
+    <div class='session'>
+        <h2>Level type</h2>
+        <div class='row' id='filters'>
+           <input id='all' type='radio' name='toggle' value='all' checked='checked'>
+          <label for='all'>All</label>
+          <input id='Platinum lodge' type='radio' name='toggle' value='Platinum lodge' checked='checked'>
+          <label for='Platinum lodge'>Platinum lodge</label>
+          <input id='Jinsu' type='radio' name='toggle' value='Jinsu'>
+          <label for='Jinsu'>Jinsu</label>
+        </div>
+      </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoieXlpaWlpaSIsImEiOiJjbTV3bDRzamUwY2NuMmlzZnE2d3poNXUyIn0.XI9csTSCyPerhYzb4sd0PQ';  // 替换为你的有效 Token
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/yyiiiii/cm77s0upa00lt01qv5qfx7c5j',  // 替换为默认样式
+            center: [120.0754, 29.3151],
+            zoom: 7
+        });
+
+        map.on('load', function () {
+            map.addControl(new mapboxgl.NavigationControl());
+        });
+    
+
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js'></script>
+<script src='https://unpkg.com/@turf/turf/turf.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
